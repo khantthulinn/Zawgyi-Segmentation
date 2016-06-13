@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZawgyiSegmentation_Example' do
+  pod 'ZawgyiSegmentation', :path => '../'
+
+  target 'ZawgyiSegmentation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
