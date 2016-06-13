@@ -1,0 +1,6 @@
+framework module ZawgyiSegmentation {
+  umbrella header "ZawgyiSegmentation-umbrella.h"
+
+  export *
+  module * { export * }
+}

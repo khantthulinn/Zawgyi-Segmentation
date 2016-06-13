@@ -1,0 +1,14 @@
+PODS:
+  - ZawgyiSegmentation (0.1.0)
+
+DEPENDENCIES:
+  - ZawgyiSegmentation (from `/Users/khantthulinn/Downloads/ZawgyiSegmentation`)
+
+EXTERNAL SOURCES:
+  ZawgyiSegmentation:
+    :path: "/Users/khantthulinn/Downloads/ZawgyiSegmentation"
+
+SPEC CHECKSUMS:
+  ZawgyiSegmentation: 15641f9e066b9c6f5f8ae3d3d9f297689b53a1c3
+
+COCOAPODS: 0.39.0
