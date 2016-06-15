@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2248B862ACDF79170A74F5DF'
+               BlueprintIdentifier = 'B1995876A4DD3988D0F64043'
                BlueprintName = 'ZawgyiSegmentation'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ZawgyiSegmentation.framework'>

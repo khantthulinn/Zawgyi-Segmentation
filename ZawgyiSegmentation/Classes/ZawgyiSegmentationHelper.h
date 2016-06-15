@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ZawgyiSegmentationHelper : NSObject
++ (NSArray *)convertZawgyiSentence:(NSString *)inputStr;
 
 @end

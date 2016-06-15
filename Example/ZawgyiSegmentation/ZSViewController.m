@@ -7,8 +7,12 @@
 //
 
 #import "ZSViewController.h"
+#import "ZawgyiSegmentationHelper.h"
+#import "UIView+CBFrameHelpers.h"
 
 @interface ZSViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *txtInput;
+@property (strong, nonatomic) IBOutlet UILabel *lblOutput;
 
 @end
 
@@ -24,6 +28,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Implementations
+
+- (IBAction)doIt:(id)sender {
+    
+    NSArray *arr = [ZawgyiSegmentationHelper convertZawgyiSentence:self.txtInput.text];
+    NSString *output = @"";
+    for (NSString *str in arr) {
+        output = [NSString stringWithFormat:@"%@%@/", output, str];
+    }
+    [self.lblOutput setText:output];
+    [self.lblOutput setH:[self.lblOutput sizeThatFits:CGSizeMake(CGRectGetWidth(self.lblOutput.frame), CGFLOAT_MAX)].height];
 }
 
 @end

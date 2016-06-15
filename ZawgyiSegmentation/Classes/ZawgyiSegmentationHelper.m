@@ -228,6 +228,7 @@
 
 + (NSArray *)convertZawgyiSentence:(NSString *)inputStr {
     
+    inputStr = [NSString stringWithFormat:@"%@ ",inputStr];
     int count = inputStr.length;
     
     NSMutableArray *keeptemporyword = [NSMutableArray array];
@@ -255,6 +256,7 @@
         for (int testingcount1 = 0; testingcount1 < STARTING_WORD.count; testingcount1++)
         {
             
+            NSLog(@">>> %@", STARTING_WORD[testingcount1]);
             if ([keeptemporyword[testingcount] isEqualToString:STARTING_WORD[testingcount1]] && booleancheck == false)
             {
                 @try {
@@ -262,15 +264,16 @@
                     {
                         
                     }
-                    else if (keeptemporyword[testingcount + 1] == @"္" || keeptemporyword[testingcount + 1] == @"ၤ")
+                    else if ([keeptemporyword[testingcount + 1]  isEqualToString:@"္"] || [keeptemporyword[testingcount + 1]  isEqualToString:@"ၤ"])
                     {
                         
-                        @try {
-                            if (keeptemporyword[testingcount + 2] == @"်" && keeptemporyword[testingcount + 3] == @"ာ" && keeptemporyword[testingcount + 4] == @"း")
+                        @try
+                        {
+                            if ([keeptemporyword[testingcount + 2] isEqualToString:@"်"]  && [keeptemporyword[testingcount + 3] isEqualToString:@"ာ"] &&  [keeptemporyword[testingcount + 4] isEqualToString:@"း"])
                             {
                                 /*this will catch the word "yout kyar"*/
                             }
-                            else if (keeptemporyword[testingcount + 1 + 1] == @"း" || keeptemporyword[testingcount + 1 + 1] == @"႔" || keeptemporyword[testingcount + 1 + 1] == @"႕" || keeptemporyword[testingcount + 1 + 1] == @"့")
+                            else if ([keeptemporyword[testingcount + 1 + 1] isEqualToString:@"း"] || [keeptemporyword[testingcount + 1 + 1] isEqualToString:@"႔"] || [keeptemporyword[testingcount + 1 + 1] isEqualToString:@"႕"]  || [keeptemporyword[testingcount + 1 + 1] isEqualToString:@"့"])
                             {
                                 check20 = testingcount + 2;
                                 for (int checking = check10; checking <= check20; checking++)
@@ -280,14 +283,12 @@
                                 
                                 stringall = [NSString stringWithFormat:@"%@%@%@", stringall, stringtesting, @"/"];
                                 
-                                
                                 booleancheck = true;
                                 stringtesting = @"";
                                 testingcount = testingcount + 2;
                             }
                             else
                             {
-                                
                                 check20 = testingcount + 1;
                                 for (int checking = check10; checking <= check20; checking++)
                                 {
@@ -353,24 +354,29 @@
             }
             
             
-            if (keeptemporyword[testingcount] == STARTING_WORD[testingcount1] && booleancheck == true)
+            if ([keeptemporyword[testingcount] isEqualToString:STARTING_WORD[testingcount1]] && booleancheck == true)
             {
                 
                 if ([keeptemporyword[testingcount] isEqualToString:@"ေ"] || [keeptemporyword[testingcount] isEqualToString:@"ႀ"] || [keeptemporyword[testingcount] isEqualToString:@"ၿ"] || [keeptemporyword[testingcount] isEqualToString:@"ၾ"] || [keeptemporyword[testingcount] isEqualToString:@"ျ"] || [keeptemporyword[testingcount] isEqualToString:@"ႂ"] || [keeptemporyword[testingcount] isEqualToString:@"ႁ"] || [keeptemporyword[testingcount] isEqualToString:@"ႄ"] || [keeptemporyword[testingcount] isEqualToString:@"ႃ"])
                 {
                     if ([keeptemporyword[testingcount] isEqualToString:@"ေ"])
                     {
-                        if (keeptemporyword[testingcount + 1] == "ႀ" || keeptemporyword[testingcount + 1] == "ၿ" || keeptemporyword[testingcount + 1] == "ၾ" || keeptemporyword[testingcount + 1] == "ျ" || keeptemporyword[testingcount] == "ႂ" || keeptemporyword[testingcount] == "ႁ" || keeptemporyword[testingcount] == "ႄ" || keeptemporyword[testingcount] == "ႃ")
+                        if ([keeptemporyword[testingcount + 1] isEqualToString:@"ႀ"] || [keeptemporyword[testingcount + 1] isEqualToString:@"ၿ"] ||
+                            [keeptemporyword[testingcount + 1] isEqualToString:@"ၾ"] ||
+                            [keeptemporyword[testingcount + 1] isEqualToString:@"ျ"] ||
+                            [keeptemporyword[testingcount + 1] isEqualToString:@"ႂ"] ||
+                            [keeptemporyword[testingcount + 1] isEqualToString:@"ႁ"] ||
+                            [keeptemporyword[testingcount + 1] isEqualToString:@"ႄ"] ||
+                            [keeptemporyword[testingcount + 1] isEqualToString:@"ႃ"])
                         {
                             booleancheck = false;
                             check10 = testingcount;
-                            testingcount=testingcount+2;
+                            testingcount = testingcount+2;
                         }
                         else
                         {
                             booleancheck = false;
                             check10 = testingcount;
-                            
                             testingcount++;
                         }
                     }
@@ -381,31 +387,22 @@
                         testingcount++;
                     }
                     
-                    
                 }
                 else
                 {
-                    
                     booleancheck = false;
                     check10 = testingcount;
-                    
-                    
                 }
             }
             
             
         }
         
-        textBox2.Text += check10 + "//";
-        textBox2.Text += check20+"\\";
-        
-        
         
     }
     
-    
-    
-    return nil;
+    NSArray *arr = [stringall componentsSeparatedByString:@"/"];
+    return arr;
 }
 
 
