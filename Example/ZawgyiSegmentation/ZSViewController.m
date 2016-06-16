@@ -32,9 +32,21 @@
 
 #pragma mark - Implementations
 
-- (IBAction)doIt:(id)sender {
+- (IBAction)segmentOnly:(id)sender {
     
-    NSArray *arr = [ZawgyiSegmentationHelper convertZawgyiSentence:self.txtInput.text];
+    NSArray *arr = [ZawgyiSegmentationHelper convertZawgyiSentence:self.txtInput.text andWillCombineWord:NO];
+    NSString *output = @"";
+    for (NSString *str in arr) {
+        output = [NSString stringWithFormat:@"%@%@/", output, str];
+    }
+    [self.lblOutput setText:output];
+    [self.lblOutput setH:[self.lblOutput sizeThatFits:CGSizeMake(CGRectGetWidth(self.lblOutput.frame), CGFLOAT_MAX)].height];
+}
+
+
+- (IBAction)combineAndSegment:(id)sender {
+    
+    NSArray *arr = [ZawgyiSegmentationHelper convertZawgyiSentence:self.txtInput.text andWillCombineWord:YES];
     NSString *output = @"";
     for (NSString *str in arr) {
         output = [NSString stringWithFormat:@"%@%@/", output, str];

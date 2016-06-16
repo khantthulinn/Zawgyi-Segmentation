@@ -9,6 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ZawgyiSegmentationHelper : NSObject
-+ (NSArray *)convertZawgyiSentence:(NSString *)inputStr;
-
++ (NSArray *)convertZawgyiSentence:(NSString *)inputStr andWillCombineWord:(BOOL)willCombine;
 @end

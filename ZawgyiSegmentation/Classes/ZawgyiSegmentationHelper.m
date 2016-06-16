@@ -227,12 +227,16 @@
 @implementation ZawgyiSegmentationHelper
 
 + (NSArray *)convertZawgyiSentence:(NSString *)inputStr {
+   return [ZawgyiSegmentationHelper convertZawgyiSentence:inputStr andWillCombineWord:NO];
+}
+
++ (NSArray *)convertZawgyiSentence:(NSString *)inputStr andWillCombineWord:(BOOL)willCombine {
     
-    inputStr = [NSString stringWithFormat:@"%@ ",inputStr];
+    inputStr = [NSString stringWithFormat:@"%@။ ",inputStr]; //To solve later instead of putting ။
     int count = inputStr.length;
     
     NSMutableArray *keeptemporyword = [NSMutableArray array];
-
+    
     for (NSInteger idx = 0; idx < inputStr.length; idx++) {
         [keeptemporyword addObject:[NSString stringWithFormat:@"%C", [inputStr characterAtIndex:idx]]];
     }
@@ -256,7 +260,6 @@
         for (int testingcount1 = 0; testingcount1 < STARTING_WORD.count; testingcount1++)
         {
             
-            NSLog(@">>> %@", STARTING_WORD[testingcount1]);
             if ([keeptemporyword[testingcount] isEqualToString:STARTING_WORD[testingcount1]] && booleancheck == false)
             {
                 @try {
@@ -267,8 +270,7 @@
                     else if ([keeptemporyword[testingcount + 1]  isEqualToString:@"္"] || [keeptemporyword[testingcount + 1]  isEqualToString:@"ၤ"])
                     {
                         
-                        @try
-                        {
+                        @try {
                             if ([keeptemporyword[testingcount + 2] isEqualToString:@"်"]  && [keeptemporyword[testingcount + 3] isEqualToString:@"ာ"] &&  [keeptemporyword[testingcount + 4] isEqualToString:@"း"])
                             {
                                 /*this will catch the word "yout kyar"*/
@@ -283,12 +285,14 @@
                                 
                                 stringall = [NSString stringWithFormat:@"%@%@%@", stringall, stringtesting, @"/"];
                                 
+                                
                                 booleancheck = true;
                                 stringtesting = @"";
                                 testingcount = testingcount + 2;
                             }
                             else
                             {
+                                
                                 check20 = testingcount + 1;
                                 for (int checking = check10; checking <= check20; checking++)
                                 {
@@ -316,7 +320,7 @@
                             stringtesting = @"";
                             testingcount++;
                         }
-
+                        
                         
                     }  //if (keeptemporyword[testingcount+1] == "္")
                     
@@ -397,13 +401,116 @@
             
             
         }
-        
-        
     }
     
     NSArray *arr = [stringall componentsSeparatedByString:@"/"];
-    return arr;
+    NSMutableArray *finalMu = [NSMutableArray array];
+    for (NSString *str in arr) {
+        if (str.length > 0)
+            [finalMu addObject:str];
+    }
+    
+    if (willCombine)
+    return [ZawgyiSegmentationHelper combineString:finalMu];
+    
+    else return finalMu;
 }
 
+#pragma mark - Combination
 
++ (NSArray *)combineString:(NSArray *)arr {
+
+    NSMutableArray *fourWordsArr = [NSMutableArray array];
+    
+    if (arr.count > 3) {
+        for (NSInteger idx = 0; idx < arr.count; idx++) {
+            
+            if (idx + 3 >= arr.count) {
+                
+                for (NSInteger bIdx = idx; bIdx < arr.count; bIdx++) {
+                    [fourWordsArr addObject:arr[bIdx]];
+                }
+                break;
+            }
+            
+            NSString *str = [NSString stringWithFormat:@"%@%@%@%@", arr[idx], arr[idx + 1] , arr[idx + 2], arr[idx+ 3]];
+            
+            if ([FOUR_WORDS containsObject:str]) {
+                [fourWordsArr addObject:str];
+                idx += 3;
+            }
+            else {
+                [fourWordsArr addObject:arr[idx]];
+            }
+        }
+    }
+    else {
+        fourWordsArr = [NSMutableArray arrayWithArray:arr];
+    }
+
+    
+    NSMutableArray *threeWordsArr = [NSMutableArray array];
+    
+    if (fourWordsArr.count > 2) {
+        for (NSInteger idx = 0; idx < fourWordsArr.count; idx++) {
+            
+            if (idx + 2 >= fourWordsArr.count) {
+                
+                for (NSInteger bIdx = idx; bIdx < fourWordsArr.count; bIdx++) {
+                    [threeWordsArr addObject:fourWordsArr[bIdx]];
+                }
+                break;
+            }
+            
+            NSString *str = [NSString stringWithFormat:@"%@%@%@", fourWordsArr[idx], fourWordsArr[idx + 1] , fourWordsArr[idx + 2]];
+            
+            if ([THREE_WORDS containsObject:str]) {
+                [threeWordsArr addObject:str];
+                idx += 2;
+            }
+            else {
+                [threeWordsArr addObject:fourWordsArr[idx]];
+            }
+        }
+    }
+    else {
+        threeWordsArr = [NSMutableArray arrayWithArray:fourWordsArr];
+    }
+
+    
+    
+    NSMutableArray *twoWordsArr = [NSMutableArray array];
+    
+    if (threeWordsArr.count > 1) {
+        for (NSInteger idx = 0; idx < threeWordsArr.count; idx++) {
+            
+            if (idx + 1 >= threeWordsArr.count) {
+                
+                for (NSInteger bIdx = idx; bIdx < threeWordsArr.count; bIdx++) {
+                    [twoWordsArr addObject:threeWordsArr[bIdx]];
+                }
+                break;
+            }
+            
+            NSString *str = [NSString stringWithFormat:@"%@%@", threeWordsArr[idx], threeWordsArr[idx + 1]];
+            
+            if ([TWO_WORDS containsObject:str]) {
+                [twoWordsArr addObject:str];
+                idx += 1;
+            }
+            else {
+                [twoWordsArr addObject:threeWordsArr[idx]];
+            }
+        }
+    }
+    else {
+        twoWordsArr = [NSMutableArray arrayWithArray:threeWordsArr];
+    }
+
+    
+    
+    
+    
+    return twoWordsArr;
+}
 @end
