@@ -1,1 +1,1 @@
-../../../../../ZawgyiSegmentation/Classes/ZawgyiSegmentationHelper.h
+../../../ZawgyiSegmentation/ZawgyiSegmentation/Classes/ZawgyiSegmentationHelper.h

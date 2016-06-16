@@ -1,33 +1,15 @@
-# Zawgyi Segmentation
+# ZawgyiSegmentation
 
+[![CI Status](http://img.shields.io/travis/Khant Thu Linn/ZawgyiSegmentation.svg?style=flat)](https://travis-ci.org/Khant Thu Linn/ZawgyiSegmentation)
 [![Version](https://img.shields.io/cocoapods/v/ZawgyiSegmentation.svg?style=flat)](http://cocoapods.org/pods/ZawgyiSegmentation)
 [![License](https://img.shields.io/cocoapods/l/ZawgyiSegmentation.svg?style=flat)](http://cocoapods.org/pods/ZawgyiSegmentation)
 [![Platform](https://img.shields.io/cocoapods/p/ZawgyiSegmentation.svg?style=flat)](http://cocoapods.org/pods/ZawgyiSegmentation)
 
-## Description
+## Example
 
-This is for segmenting sentence written in Zawgyi. Example is shown below. 
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![Converting](Media/photo1.png)
-
-You can also combine meaningful words together like this.
-
-![Converting](Media/photo2.png)
-
-To run this project, clone the repo, and run `pod install` from the project directory first.
-
-## Output
-
-![Converting](Media/out.gif)
-
-## Usuage
-
-Simply put your input string and get segmented words back in array. 
-
-```obj-c
-NSArray *arr = [ZawgyiSegmentationHelper convertZawgyiSentence:self.txtInput.text andWillCombineWord:NO];
-
-```
+## Requirements
 
 ## Installation
 
@@ -37,9 +19,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "ZawgyiSegmentation"
 ```
-
-
-
 
 ## Author
 

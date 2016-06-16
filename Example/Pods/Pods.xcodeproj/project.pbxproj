@@ -10,32 +10,6 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>00FFA1EA697A5BE348685BFD3D084E40</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ZawgyiSegmentation-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>01E516CE245053CD3740E3C5F53F1D74</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>0BFF7330A8819F1C0417C77FE05EA3E4</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -49,6 +23,13 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
+		</dict>
+		<key>0C6138B98369751C6CEC610ACC708E75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F8C08CCD65B95DB483AA0B9C1B037B07</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>10DE1947DAC0ED28F6C0A9F9BD75D546</key>
 		<dict>
@@ -131,6 +112,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>14A2ADA8F1AED65807A328156E4211AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ZawgyiSegmentation-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1A2F5903020198A99C7FC5289D9E0467</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -144,48 +138,16 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>1EE311340C6BB6743A4B16A7AAF398CF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>677BF42A8F256238D63B8087B70421DE</string>
-				<string>6991EDBF569ACE1A78358F1602463F14</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1F4A4CCB01F7E2A3E74908094E2B0B93</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ZawgyiSegmentation.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>27AE49CE15B0EC55B605200A434B8FE9</key>
+		<key>2C0AD3BBD2211762A34C266E9AB7DB37</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>01E516CE245053CD3740E3C5F53F1D74</string>
-				<string>1F4A4CCB01F7E2A3E74908094E2B0B93</string>
-				<string>4D7AC4EC05E5D8063C08ECF61E1D8B72</string>
-				<string>F72E7E1D200BE08F2B02904FFAB12208</string>
-				<string>B453762ED3659B76971E9E963767AD59</string>
-				<string>00FFA1EA697A5BE348685BFD3D084E40</string>
+				<string>54FDFEFACDF4ED499669608F0C03186B</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/ZawgyiSegmentation</string>
+			<string>Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -203,19 +165,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>324B826DAB5153FBFDD917258C1064D1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F4F0255C6248D46F19B4CAFFEF25F977</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>33DE08E7CC27594DDBFCD10108AA0C6A</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -229,7 +178,50 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>385C6FC9910D21BB9CB3010202F36A96</key>
+		<key>35A2A0F9A151FBC2017A5B562B345247</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ZawgyiSegmentationHelper.h</string>
+			<key>path</key>
+			<string>ZawgyiSegmentation/Classes/ZawgyiSegmentationHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>369A6FE0291BFC2154C62EA9CEC063AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4F7453090BB391985F4EB11E4BAF5999</string>
+				<string>0C6138B98369751C6CEC610ACC708E75</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>38F868ECF57630335586911B0064A25E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>47EDBF095CC8CFD8B141A64734AD8B49</string>
+				<string>A5736A4C9C5DA7BEAB373D28767FC083</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3D86EBF65782DF4800ADE4D0B5D3A00F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -238,7 +230,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>ZawgyiSegmentationHelper.h</string>
+			<string>ZawgyiSegmentation-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -268,6 +260,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>47EDBF095CC8CFD8B141A64734AD8B49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3D86EBF65782DF4800ADE4D0B5D3A00F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>4B898A19804D0C2C3FC6A4B93E5FB9B4</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -279,16 +285,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4D7AC4EC05E5D8063C08ECF61E1D8B72</key>
+		<key>4EFA2819866AD59AEE817A4EBBED0EC5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>ZawgyiSegmentation.xcconfig</string>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -305,15 +311,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4F7453090BB391985F4EB11E4BAF5999</key>
+		<dict>
+			<key>fileRef</key>
+			<string>14A2ADA8F1AED65807A328156E4211AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>5108E037739C806C8A973403B30675A0</key>
 		<dict>
 			<key>buildConfigurationList</key>
 			<string>0BFF7330A8819F1C0417C77FE05EA3E4</string>
 			<key>buildPhases</key>
 			<array>
-				<string>1EE311340C6BB6743A4B16A7AAF398CF</string>
+				<string>369A6FE0291BFC2154C62EA9CEC063AF</string>
 				<string>33DE08E7CC27594DDBFCD10108AA0C6A</string>
-				<string>E618C4B847F24B09B7EF494A27D17E83</string>
+				<string>38F868ECF57630335586911B0064A25E</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -340,6 +353,23 @@
 			<string>5108E037739C806C8A973403B30675A0</string>
 			<key>targetProxy</key>
 			<string>BF1B4F71D9E18E923C7458527A3A05F0</string>
+		</dict>
+		<key>54FDFEFACDF4ED499669608F0C03186B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>35A2A0F9A151FBC2017A5B562B345247</string>
+				<string>F8C08CCD65B95DB483AA0B9C1B037B07</string>
+				<string>FDAFCB3517AE32E2C9D8A25DB9FB47A2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ZawgyiSegmentation</string>
+			<key>path</key>
+			<string>ZawgyiSegmentation</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>552D02D5BA751AC2E8790D2811D496CA</key>
 		<dict>
@@ -414,35 +444,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>55DA74694409E268D34952566D3B8CBF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6CB8139F78DA058DAC78DDB41441CEB8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ZawgyiSegmentation</string>
-			<key>path</key>
-			<string>ZawgyiSegmentation</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>571617FDA768D8F1F1A88A1C714DB235</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00FFA1EA697A5BE348685BFD3D084E40</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>5C6B1503D9D24293150C95420082FF3C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -469,13 +470,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>677BF42A8F256238D63B8087B70421DE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F72E7E1D200BE08F2B02904FFAB12208</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>68D09ABC8B36FFFD5DBA5F2F555E0EF3</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -489,26 +483,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6991EDBF569ACE1A78358F1602463F14</key>
+		<key>7964CBB32667E573D86609D43EE8A206</key>
 		<dict>
-			<key>fileRef</key>
-			<string>94B6013E4ACC4EB6558FCFEC87680A89</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6CB8139F78DA058DAC78DDB41441CEB8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>385C6FC9910D21BB9CB3010202F36A96</string>
-				<string>94B6013E4ACC4EB6558FCFEC87680A89</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Classes</string>
+			<string>ZawgyiSegmentation-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -517,8 +501,8 @@
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>324B826DAB5153FBFDD917258C1064D1</string>
 				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
+				<string>2C0AD3BBD2211762A34C266E9AB7DB37</string>
 				<string>C1AF0D04DC1FD956CBA7988274252084</string>
 				<string>CEF501D3632F7EE57C3F466544DE0E56</string>
 			</array>
@@ -595,19 +579,6 @@
 			<string>3E4E89230EF59BC255123B67864ACF77</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>94B6013E4ACC4EB6558FCFEC87680A89</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ZawgyiSegmentationHelper.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>94DD0D583B650A46FD7DAB2360E3C916</key>
 		<dict>
@@ -697,20 +668,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>9CA7611DA5B13C593FF7E4D5F1AF8A63</key>
-		<dict>
-			<key>fileRef</key>
-			<string>385C6FC9910D21BB9CB3010202F36A96</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>A255B27ED5B5EAC3506EBA9E352C1C23</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -726,6 +683,20 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>A5736A4C9C5DA7BEAB373D28767FC083</key>
+		<dict>
+			<key>fileRef</key>
+			<string>35A2A0F9A151FBC2017A5B562B345247</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>A64174AC44A709CC3B5FCD9DDE89136C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -736,6 +707,17 @@
 			<string>text.xcconfig</string>
 			<key>path</key>
 			<string>Pods-ZawgyiSegmentation_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9C6BCCBD156F3FECF88F58E38F5364A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ZawgyiSegmentation.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -753,19 +735,6 @@
 			<string>Pods_ZawgyiSegmentation_Example.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B453762ED3659B76971E9E963767AD59</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ZawgyiSegmentation-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B79E41EC68A0E697B1FF09E5199470FF</key>
 		<dict>
@@ -796,7 +765,7 @@
 		<key>B8A7693CAEF687D65F603727BA74011D</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>4D7AC4EC05E5D8063C08ECF61E1D8B72</string>
+			<string>EC73CB1B60420387892B63587F543704</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1067,7 +1036,7 @@
 		<key>E1ABFACF755D1C4210F9FCBF79909C8C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>4D7AC4EC05E5D8063C08ECF61E1D8B72</string>
+			<string>EC73CB1B60420387892B63587F543704</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1120,37 +1089,20 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>E618C4B847F24B09B7EF494A27D17E83</key>
+		<key>EC73CB1B60420387892B63587F543704</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>571617FDA768D8F1F1A88A1C714DB235</string>
-				<string>9CA7611DA5B13C593FF7E4D5F1AF8A63</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F4F0255C6248D46F19B4CAFFEF25F977</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>27AE49CE15B0EC55B605200A434B8FE9</string>
-				<string>55DA74694409E268D34952566D3B8CBF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ZawgyiSegmentation</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>/Users/khantthulinn/Downloads/ZawgyiSegmentation</string>
+			<string>ZawgyiSegmentation.xcconfig</string>
 			<key>sourceTree</key>
-			<string>&lt;absolute&gt;</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F72E7E1D200BE08F2B02904FFAB12208</key>
+		<key>F8C08CCD65B95DB483AA0B9C1B037B07</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1158,8 +1110,30 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ZawgyiSegmentationHelper.m</string>
 			<key>path</key>
-			<string>ZawgyiSegmentation-dummy.m</string>
+			<string>ZawgyiSegmentation/Classes/ZawgyiSegmentationHelper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FDAFCB3517AE32E2C9D8A25DB9FB47A2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4EFA2819866AD59AEE817A4EBBED0EC5</string>
+				<string>A9C6BCCBD156F3FECF88F58E38F5364A</string>
+				<string>EC73CB1B60420387892B63587F543704</string>
+				<string>14A2ADA8F1AED65807A328156E4211AF</string>
+				<string>7964CBB32667E573D86609D43EE8A206</string>
+				<string>3D86EBF65782DF4800ADE4D0B5D3A00F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/ZawgyiSegmentation</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

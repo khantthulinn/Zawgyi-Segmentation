@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'ZawgyiSegmentation_Example' do
-  pod 'ZawgyiSegmentation', :path => '/Users/khantthulinn/Downloads/ZawgyiSegmentation'
+  pod 'ZawgyiSegmentation'
 end
