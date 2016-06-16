@@ -38,12 +38,13 @@ it, simply add the following line to your Podfile:
 pod "ZawgyiSegmentation"
 ```
 
+## Note
 
-
+Initially, it is created in C# last 5 years ago. I just convert everything to Objective-c and make it as cocoapods. You can edit/use this project as you like. This can be used to make word wrap for Zawgyi sentence.  Please feel free to contact me.
 
 ## Author
 
-Khant Thu Linn, khantthulinn@gmail.com
+Khant Thu Linn
 
 ## License
 
